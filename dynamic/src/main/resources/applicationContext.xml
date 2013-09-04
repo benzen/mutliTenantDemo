@@ -15,7 +15,7 @@
     <property name="location" value="classpath:tenant.properties"/>
   </bean>
 
-  <bean id="parentDataSource" class="org.apache.tomcat.jdbc.pool.DataSource" >
+  <bean id="parentDataSource" class="org.apache.tomcat.jdbc.pool.DataSource" scope="prototype">
       <property name="driverClassName" value="org.postgresql.Driver"/>
       <property name="url" value="jdbc:postgresql://localhost:5432/"/>
       <property name="username" value="mtUser"/>

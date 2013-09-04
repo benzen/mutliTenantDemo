@@ -55,6 +55,9 @@ class DataSourceBeanFactory {
   }
   void treatTenantDataSource(String tenantId ) throws Exception{
     String dbUrl = tenantProperties.getProperty( "db.url." + tenantId );
+    if(dbUrl==null){ 
+      throw new Exception("No url is defined the db of tenant " + tenantId );
+    }
     DataSource ds = (DataSource) beanFactory.getBean("parentDataSource");
     ds.getClass().getMethod("setUrl", String.class ).invoke(ds, dbUrl);
 
