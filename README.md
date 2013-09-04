@@ -3,13 +3,26 @@ Exemple for using Multy-tenancy with spring
 What
 =======
 
-This is an exemple of how to achieve multi-tenacy (see http://en.wikipedia.org/wiki/Multitenancy) with spring inside a java container.
+This is an exemple of how to achieve multi-tenacy 
+(see http://en.wikipedia.org/wiki/Multitenancy) with spring inside a java container.
+This project use maven as building tool.
+
+Required environment
+====================
+
+tomcat + postgres
+
+It's not essential to use the same. You can use another db, or servlet container.
+You'll just need some adaptation.
+
 
 Creation of Db
 ================
 
 To run this exemple you need to run the sql script
     /src/resource/import.sql
+
+This will create 1 user, 3 db, 1 table in each db
 
 Testing
 =============
