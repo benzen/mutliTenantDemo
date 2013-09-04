@@ -37,7 +37,7 @@ public class MyController{
       String s = "";
       s += " <h1>Mt-demonstration</h1>"+"<br/><br/><br/><br/>";
       s += "Current URL: "+url+"<br/>";
-      s += "Key is based on the header 'ifsrTenantId', current one is: "+getTenantId()+"<br/>";
+      s += "Key is based on the header 'tenantId', current one is: "+getTenantId()+"<br/>";
       s += "in "+getTenantId()+"'s db there is "+getNumberOfRecordForTheCurrentTennant() +" contact(s) <br/>";
     
       return s;
@@ -55,6 +55,6 @@ public class MyController{
     return -1;
   }
   private String getTenantId(){
-    return request.getHeader("ifsrTenantId");
+    return request.getHeader("tenantId");
   }
 }
