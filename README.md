@@ -14,10 +14,13 @@ This project use maven as building tool.
 Required environment
 ====================
 
-tomcat + postgres
+apache+tomcat + postgres
 
 It's not essential to use the same. You can use another db, or servlet container.
 You'll just need some adaptation.
+
+We need to have a tenantId placed in on of the headers of the request.
+That's why there is a apache in front of this.
 
 
 Creation of Db
@@ -35,12 +38,9 @@ Compile the project
     mvn clean package
 
 Deploy it in a tomcat, go to one of thoses pages:
-http://localhost:8080/mt-1.0-SNAPSHOT/GOLD
-http://localhost:8080/mt-1.0-SNAPSHOT/SILVER
-http://localhost:8080/mt-1.0-SNAPSHOT/BRONZE
+http://localhost:8080/mt-1.0-SNAPSHOT/
 
-Then go to 
-http://localhost:8080/mt-1.0-SNAPSHOT/whatEverYouWhant
+Depending on the value of the tenantId, there will be printed the number of contact in the db.
 
 
 There is two version a static and a dynamic version of this demo

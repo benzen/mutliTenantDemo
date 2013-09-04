@@ -16,6 +16,6 @@ class RoutingDataSource extends AbstractRoutingDataSource {
    @Override
    protected Object determineCurrentLookupKey() {
    	if(request == null ){throw new RuntimeException("Pas de request");}
-   	  return request.getHeader("ifsrTenantId");
+   	  return request.getHeader("tenantId");
    }
 }
